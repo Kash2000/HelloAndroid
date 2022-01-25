@@ -16,4 +16,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main);
 
     }
+    fun onAnswerBtn(view : View) {
+        val btn = findViewById(R.id.button) as Button;
+        val textView = TextView(this)
+        btn.setOnClickListener {
+            textView.text = getString(R.string.hello_android)
+            Toast.makeText(this@MainActivity, textView.text, Toast.LENGTH_SHORT).show()
+        }
+    }
 }
